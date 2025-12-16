@@ -56,14 +56,16 @@ class _MainPageState extends State<MainPage> {
         ),
         centerTitle: true,
         title: AnimatedTextKit(
+
           animatedTexts: [
             ColorizeAnimatedText(
               'Gate Entry Process',
-              textStyle: CommonText.textDataBlock15(),
+              textStyle: CommonText.textDataBlock20(),
               colors: [
+                // Colors.black54,
                 Colors.white,
-                Colors.black,
-                Colors.white12,
+                Colors.white,
+                Colors.white,
               ],
             ),
           ],
@@ -123,13 +125,12 @@ class _MainPageState extends State<MainPage> {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    BounceAnimatedText('Header',textStyle: CommonText.textDataBlock16B(),),
-                    BounceAnimatedText('Header',textStyle: CommonText.textDataBlock16B(),),
-                    BounceAnimatedText('Header',textStyle: CommonText.textDataBlock16B(),),
-                  ]
-                ),
+                  child: Text("Header",style: CommonText.textDataBlock15(), )
+                // AnimatedTextKit(
+                //   animatedTexts: [
+                //     BounceAnimatedText('Header',textStyle: CommonText.textDataBlock15(),),
+                //   ]
+                // ),
               ),
               SizedBox(
                 height: 5,
@@ -375,13 +376,12 @@ class _MainPageState extends State<MainPage> {
               SizedBox(height: 15),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: AnimatedTextKit(
-                    animatedTexts: [
-                      BounceAnimatedText('Hand Delivery',textStyle: CommonText.textDataBlock16B(),),
-                      BounceAnimatedText('Hand Delivery',textStyle: CommonText.textDataBlock16B(),),
-                      BounceAnimatedText('Hand Delivery',textStyle: CommonText.textDataBlock16B(),),
-                    ]
-                ),
+                child: Text('Hand Delivery',style: CommonText.textDataBlock15())
+                // AnimatedTextKit(
+                //     animatedTexts: [
+                //       BounceAnimatedText('Hand Delivery',textStyle: CommonText.textDataBlock15(),),
+                //     ]
+                // ),
               ),
               SizedBox(height: 15),
               Card(
@@ -596,13 +596,12 @@ class _MainPageState extends State<MainPage> {
               SizedBox(height: 15),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: AnimatedTextKit(
-                    animatedTexts: [
-                      BounceAnimatedText('Table',textStyle: CommonText.textDataBlock16B(),),
-                      BounceAnimatedText('Table',textStyle: CommonText.textDataBlock16B(),),
-                      BounceAnimatedText('Table',textStyle: CommonText.textDataBlock16B(),),
-                    ]
-                ),
+                child: Text('Table',style: CommonText.textDataBlock15())
+                // AnimatedTextKit(
+                //     animatedTexts: [
+                //       BounceAnimatedText('Table',textStyle: CommonText.textDataBlock15(),),
+                //     ]
+                // ),
               ),
               SizedBox(height: 10),
               Card(
@@ -616,13 +615,66 @@ class _MainPageState extends State<MainPage> {
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                   child: Column(
                     children: [
-                      Column(
+                      // Column(
+                      //   children: [
+                      //     Row(
+                      //       children: [
+                      //         Expanded(
+                      //           flex: 1,
+                      //           child: Row(
+                      //             children: [
+                      //               Expanded(
+                      //                 flex: 2,
+                      //                 child: Text(
+                      //                   "Invoice Number",
+                      //                   style: CommonText.textDataBlock12B(),
+                      //                 ),
+                      //               ),
+                      //               Expanded(
+                      //                 flex: 5,
+                      //                 child: CustomTextFieldCard(
+                      //                   hintText: "Invoice Number",
+                      //                   onChanged: (value) {},
+                      //                 ),
+                      //               ),
+                      //             ],
+                      //           ),
+                      //         ),
+                      //         SizedBox(width: 50), // spacing between the two groups
+                      //         Expanded(
+                      //           flex: 1,
+                      //           child: Row(
+                      //             children: [
+                      //               Expanded(
+                      //                 flex: 2,
+                      //                 child: Text(
+                      //                   "Invoice Date",
+                      //                   style: CommonText.textDataBlock12B(),
+                      //                 ),
+                      //               ),
+                      //               Expanded(
+                      //                 flex: 5,
+                      //                 child: CustomDateFieldCard(
+                      //                   hintText: "Document Date",
+                      //                   controller: invDateController,
+                      //                 ),
+                      //               ),
+                      //             ],
+                      //           ),
+                      //         ),
+                      //         SizedBox(width: 50),
+                      //         Expanded(child: Container())
+                      //       ],
+                      //     )
+                      //   ],
+                      // ),
+
+                      Row(
                         children: [
-                          Row(
-                            children: [
-                              Expanded(
-                                flex: 1,
-                                child: Row(
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Row(
                                   children: [
                                     Expanded(
                                       flex: 2,
@@ -640,11 +692,14 @@ class _MainPageState extends State<MainPage> {
                                     ),
                                   ],
                                 ),
-                              ),
-                              SizedBox(width: 16), // spacing between the two groups
-                              Expanded(
-                                flex: 1,
-                                child: Row(
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: 50), // optional spacing
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Row(
                                   children: [
                                     Expanded(
                                       flex: 2,
@@ -655,19 +710,23 @@ class _MainPageState extends State<MainPage> {
                                     ),
                                     Expanded(
                                       flex: 5,
-                                      child: CustomDateFieldCard(
-                                        hintText: "Document Date",
-                                        controller: invDateController,
-                                      ),
+                                      child: CustomDateFieldCard(hintText: "Invoice Date", controller: invDateController),
                                     ),
                                   ],
                                 ),
-                              ),
-                            ],
-                          )
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: 50), // optional spacing
+                          Expanded(
+                            child: Column(
+                              children: [
+
+                              ],
+                            ),
+                          ),
                         ],
-                      )
-                      ,
+                      ),
                       SizedBox(
                         height: 12,
                       ),

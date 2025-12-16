@@ -9,6 +9,13 @@ class CommonText {
       fontSize: 18,
     );
   }
+  static textDataBlock20() {
+    return GoogleFonts.montserrat(
+      color: Colors.black,
+      fontWeight: FontWeight.bold,
+      fontSize: 20,
+    );
+  }
   static textDataBlock16B() {
     return GoogleFonts.montserrat(
       color: Colors.black54,
